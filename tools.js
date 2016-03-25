@@ -1,5 +1,5 @@
 /**
- * Dragonqiu's codes, common function.
+ * common function.
  * A js tools.
  * @version 1.1
  */
