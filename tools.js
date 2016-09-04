@@ -246,14 +246,29 @@
     var tools = new Tools;
 
     // 请求类
+    /**
+     * 配置请求与lua通信
+     * var req = new t.Req({
+     *  mode: 'CALLLUA'
+     * });
+     * 调用get
+     *  req.get({
+     *          uri: 'command',
+     *          data: { param: 0 }
+     *      }).then(function(data) {
+     *          if (data.ret == 0) {
+     *              ...do something
+     *          }
+     *      }, function() {});
+     */
     function Req(opts){
         this.settings = {
-            uri: "",
-            mimeType: "application/json",
-            format: "json",
-            mode: "XHR",
-            content: "",
-            data: null,
+            uri: "", // 命令或请求地址
+            mimeType: "application/json", // 需要获得的文件格式和媒体类型
+            format: "json", // 需获得的格式化形势
+            mode: "XHR", // 通信的类型
+            content: "", // 需要获得的内容字段
+            data: null, // 发送的内容字段
         };
         opts && _setData(opts, this);
     };
